@@ -9,3 +9,14 @@
 Link server webmobile: https://mega.nz/file/f80iUK4Q#ppaGvPykFhduYLElcJFHMoFM_eT_4wUufJL5WXgvy4w (user e pass: webmobile)
 
 NB. se necessario vi sono le pic utilizzate in una cartella apposita
+
+# Screenshot
+
+
+![Alt text](/screen/login.PNG?raw=true "Optional Title")
+![Alt text](/screen/signup.PNG?raw=true "Optional Title")
+![Alt text](/screen/miei.PNG?raw=true "Optional Title")
+![Alt text](/screen/condividi.PNG?raw=true "Optional Title")
+![Alt text](/screen/home.PNG?raw=true "Optional Title")
+![Alt text](/screen/info.PNG?raw=true "Optional Title")
+![Alt text](/screen/aggiunto.PNG?raw=true "Optional Title")
