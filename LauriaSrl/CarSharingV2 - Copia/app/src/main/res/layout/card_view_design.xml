@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewDesign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:id="@+id/orario1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="00/00 00:00"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/routeline" />
+
+                <TextView
+                    android:id="@+id/orario2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="00/00 00:00"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/routeline"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/routeline"
+                    android:layout_width="40dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintStart_toEndOf="@+id/orario1"
+                    app:srcCompat="@drawable/line"
+                    tools:layout_editor_absoluteY="5dp" />
+
+
+                <TextView
+                    android:id="@+id/partenza"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Partenza"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toEndOf="@+id/routeline"
+                    app:layout_constraintTop_toTopOf="@+id/routeline" />
+
+                <TextView
+                    android:id="@+id/destinazione"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Destinazione"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/routeline"
+                    app:layout_constraintStart_toEndOf="@+id/routeline" />
+
+                <ImageView
+                    android:id="@+id/posto_green"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:alpha="1.0"
+                    app:layout_constraintBottom_toTopOf="@+id/destinazione"
+                    app:layout_constraintStart_toEndOf="@+id/routeline"
+                    app:layout_constraintTop_toBottomOf="@+id/partenza"
+                    app:srcCompat="@drawable/posto_green" />
+
+                <ImageView
+                    android:id="@+id/posto_yellow"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:alpha="0.3"
+                    app:layout_constraintBottom_toTopOf="@+id/destinazione"
+                    app:layout_constraintStart_toEndOf="@+id/posto_green"
+                    app:layout_constraintTop_toBottomOf="@+id/partenza"
+                    app:srcCompat="@drawable/posto_yellow" />
+
+                <ImageView
+                    android:id="@+id/posto_red"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:alpha="0.3"
+                    app:layout_constraintBottom_toTopOf="@+id/destinazione"
+                    app:layout_constraintStart_toEndOf="@+id/posto_yellow"
+                    app:layout_constraintTop_toBottomOf="@+id/partenza"
+                    app:srcCompat="@drawable/posto_red" />
+
+
+                <TextView
+                    android:id="@+id/prezzo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="XX €"
+                    android:textSize="34dp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/disponibili"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="X Disponibili"
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toTopOf="@+id/destinazione"
+                    app:layout_constraintStart_toEndOf="@+id/posto_red"
+                    app:layout_constraintTop_toBottomOf="@+id/partenza" />
+
+                <ImageView
+                    android:id="@+id/autoimg"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/routeline"
+                    app:srcCompat="@drawable/baseline_home_24" />
+
+                <TextView
+                    android:id="@+id/modello"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Modello"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toEndOf="@+id/autoimg"
+                    app:layout_constraintTop_toTopOf="@+id/autoimg" />
+
+                <TextView
+                    android:id="@+id/nome_proprietario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Nome"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toTopOf="@+id/email_proprietario"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/email_proprietario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="example@gmail.com"
+                    android:textSize="10dp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

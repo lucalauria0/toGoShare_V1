@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.fragment.AddAutoFragment">
+
+    <LinearLayout
+        android:padding="12dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titolo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="24dp"
+            android:text="Condividi la tua auto in viaggio!"
+            android:textSize="30dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/dovevuoiandare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Dove vuoi andare?"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/xPartenza"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Partenza"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/xDestinazione"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Destinazione" />
+
+        <TextView
+            android:id="@+id/infoauto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Info sul viaggio..."
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/xModello"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Marca e Modello Auto" />
+
+        <EditText
+            android:id="@+id/xPrezzo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Prezzo" />
+
+        <EditText
+            android:id="@+id/xPostiDisponibili"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Numero posti da condividere" />
+
+        <Button
+            android:id="@+id/xCondividiButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/Blu"
+            android:textColor="@color/Seasalt"
+            android:textStyle="italic|bold"
+            android:textSize="24dp"
+            android:layout_gravity="center"
+            android:text="Avanti" />
+
+
+    </LinearLayout>
+
+
+
+
+</FrameLayout>

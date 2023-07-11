@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.fragment.AutoDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/indietro"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:text="Indietro" />
+
+            <TextView
+                android:id="@+id/titolo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Prenota ora un posto a sedere!"
+                android:textSize="34dp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/autoimmagine"
+                android:layout_width="400dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titolo"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Info Viaggio..."
+                android:textSize="28dp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toTopOf="@+id/routeline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/autoimmagine" />
+
+            <TextView
+                android:id="@+id/orario1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="00/00 00:00"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/routeline" />
+
+            <TextView
+                android:id="@+id/orario2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="00/00 00:00"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="@+id/routeline"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/routeline"
+                android:layout_width="80dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/posti_disponibili"
+                app:layout_constraintStart_toEndOf="@+id/orario1"
+                app:layout_constraintTop_toBottomOf="@+id/subtitle1"
+                app:srcCompat="@drawable/line" />
+
+
+            <TextView
+                android:id="@+id/partenza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Partenza"
+                android:textStyle="bold|italic"
+                android:textSize="24dp"
+                app:layout_constraintStart_toEndOf="@+id/routeline"
+                app:layout_constraintTop_toTopOf="@+id/routeline" />
+
+            <TextView
+                android:id="@+id/destinazione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Destinazione"
+                android:textStyle="bold|italic"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/routeline"
+                app:layout_constraintStart_toEndOf="@+id/routeline" />
+
+            <ImageView
+                android:id="@+id/posto_green"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:alpha="1.0"
+                app:layout_constraintStart_toEndOf="@+id/routeline"
+                app:layout_constraintTop_toBottomOf="@+id/partenza"
+                app:srcCompat="@drawable/posto_green" />
+
+            <ImageView
+                android:id="@+id/posto_yellow"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:alpha="0.3"
+                app:layout_constraintStart_toEndOf="@+id/posto_green"
+                app:layout_constraintTop_toBottomOf="@+id/partenza"
+                app:srcCompat="@drawable/posto_yellow" />
+
+            <ImageView
+                android:id="@+id/posto_red"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:alpha="0.3"
+                app:layout_constraintStart_toEndOf="@+id/posto_yellow"
+                app:layout_constraintTop_toBottomOf="@+id/partenza"
+                app:srcCompat="@drawable/posto_red" />
+
+            <TextView
+                android:id="@+id/posti_disponibili"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Posti Disponibili"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/routeline" />
+
+            <TextView
+                android:id="@+id/subtitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Info Proprietario..."
+                android:textSize="28dp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/posti_disponibili" />
+
+            <TextView
+                android:id="@+id/nome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Nomeç "
+                android:textSize="24dp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subtitle2" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Email "
+                android:textSize="20dp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nome" />
+
+            <Button
+                android:id="@+id/prenotabutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="150dp"
+                android:text="Prenota Ora"
+                android:textSize="30dp"
+                android:textStyle="italic|bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/email"></Button>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+</FrameLayout>

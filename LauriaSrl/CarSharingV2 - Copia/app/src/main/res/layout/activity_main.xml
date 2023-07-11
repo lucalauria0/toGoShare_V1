@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20sp"
+    android:background="@color/Blu"
+    tools:context=".start.MainActivity">
+
+    <TextView
+        android:id="@+id/xLoginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:padding="10px"
+        android:text="Benvento in toGoShare !\nRegistrati e parti..."
+        android:textColor="@color/Seasalt"
+        android:textSize="32dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/xLoginButton"
+        style="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="24dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/Seasalt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xLoginText" />
+
+    <Button
+        android:id="@+id/xSignUpButton"
+        style="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/RaisinBlack"
+        android:text="Nuovo Account"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xLoginButton" />
+
+    <EditText
+        android:id="@+id/xLoginNick"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Email"
+        android:textColorHint="@color/Seasalt"
+        android:textColor="@color/Seasalt"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/xLoginPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xLoginText" />
+
+    <EditText
+        android:id="@+id/xLoginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Password"
+        android:textColorHint="@color/Seasalt"
+        android:textColor="@color/Seasalt"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/xLoginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xLoginText" />
+
+    <Switch
+        android:id="@+id/ricordami"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/Seasalt"
+        android:text="Ricorda le mie credenziali"
+        app:layout_constraintBottom_toTopOf="@+id/xLoginButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xLoginPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

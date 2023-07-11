@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20sp"
+    android:backgroundTint="@color/Seasalt"
+    tools:context=".start.SignUpActivity">
+
+    <TextView
+        android:id="@+id/xSignUpText"
+        style="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Registra adesso il tuo account!"
+        android:textAlignment="center"
+        android:textSize="26dp"
+        android:textStyle="italic|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/signinimage"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xSignUpText"
+        app:srcCompat="@drawable/sign_in" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="20dp">
+
+        <EditText
+            android:id="@+id/xNome"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:layout_marginTop="200dp"
+            android:hint="Nome"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/xCognome"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Cognome"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/xEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Inserisci la tua email"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/xPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Crea una password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/xPasswordRepeat"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Ripeti password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/xSignUpButton"
+            style="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Crea Nuovo Account"
+            android:backgroundTint="@color/Blu"
+            android:textColor="@color/Seasalt"
+            android:textStyle="italic|bold"
+            android:textSize="24dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
